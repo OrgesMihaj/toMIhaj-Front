@@ -1,0 +1,142 @@
+
+/**
+ * Header component
+ * 
+ */
+
+.c-header {
+	display: flex;
+		justify-content: space-between;
+		align-items: center;
+	padding: 2rem 4rem;
+}	
+	.c-header__logo {		
+		display: inline-block;
+		font-size: 2rem;
+		font-family: "futura-pt-extra-bold-italic-regular";
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	
+	.c-header__link {
+		background: #FFEA00;
+		color: #41463D;
+		padding: 0 5px;
+		transition: all 330ms ease-in-out;
+	}
+		.c-header__link:hover {
+			background: #41463D;
+			color: #FFEA00;
+		}
+
+/**
+ * Nav component
+ * 
+ */
+
+.c-nav {
+	font-weight: 300;
+	position: fixed;
+	    top: 40%; left: 4.8rem;
+
+	transform: rotate(270deg) translate(-50%,50%);
+	transform-origin: left center;
+    z-index: 100;
+}
+	.c-nav .c-nav__item {
+		display: inline-block;
+		margin-left: 25px;
+	}
+		.c-nav .c-nav__link {
+			font-family: "futura-pt-demi";
+			color: #999;
+			font-size: 1.2rem;
+			transition: color 330ms ease-in-out;
+		}
+			.c-nav .c-nav__link:hover {
+				color: #000;
+			}
+
+		.c-nav .c-nav__link--is-active {
+			background: #FFEA00;
+			color: #41463D;
+			padding: 0 5px;
+		}
+
+
+/**
+ * Email component in the main page
+ * 
+ */
+.c-contact-email {
+	background: #FFEA00;
+	color: #41463D;
+	font-weight: 300;
+	font-family: "futura-pt-demi";
+	font-size: 1.3rem;
+	position: fixed;
+	    top: 45%; right: 4.8rem;
+	padding: 0 10px;
+	transform: rotate(90deg) translate(15%, 50%);
+	transform-origin: right center;
+    z-index: 100;
+}
+
+/**
+ * Introduction component.
+ * 
+ */
+
+.c-introduction {
+	margin-top: 27px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 68vw;
+}
+	.c-introduction__content {
+	    color: #303030;
+	    font-size: 3.85vw;
+	    line-height: 150%;
+	    margin-bottom: 1.2rem;
+	    z-index: 2;
+	}
+
+	.c-introduction__additional {
+	    color: #999;
+	    font-size: 1.3rem;
+	    font-weight: 500;
+	    margin-bottom: 5vh;
+	    letter-spacing: .03rem;
+	    line-height: 180%;
+	}
+
+
+/**
+ * Social icons component.
+ * 
+ */
+
+.c-social {}
+
+	.c-social__item {
+		display: inline-block;
+		margin-left: 25px;
+	}
+		.c-social__item:first-child {
+			margin-left: 0;
+		}
+		
+	.c-social__link {
+		font-size: 1.2rem;
+	}
+		.social__link--facebook {
+			color: #3C5A99;
+		}
+
+		.social__link--instagram {
+			color: #E1306C;
+		}
+
+		.social__link--linkedin {
+			color: #4875B4;
+		}

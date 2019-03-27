@@ -1,0 +1,68 @@
+/**
+ * Objects are small and reusable pieces with no aesthetics 
+ * which can be used in UI composition. 
+ */
+
+
+.o-container,
+.o-container--fluid {
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+    padding-left: 15px;
+}
+
+.o-container {
+	max-width: 1320px;
+}
+
+.o-container--fluid {
+    width: 100%;
+}
+
+	.o-row {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+
+.o-highlight {
+	color: #C84630;
+	padding: 0 5px;
+	font-family: "futura-pt-demi"
+}
+
+
+.o-button {
+	background: #FFF;
+	border: 2px solid #C84630;
+    border-radius: 1px;
+
+    color: #C84630;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all .2s ease;
+	z-index: 2;
+}
+	.o-button:hover {
+		background: #C84630;
+		color: #FFF;
+	}
+
+	.o-button--is-big {
+		padding: .5rem 1.7rem;
+	}
+
+.o-divider {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	width: 25px;
+}
+
+.o-clearfix {
+	clear: both;
+}
