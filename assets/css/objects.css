@@ -21,9 +21,53 @@
 }
 
 	.o-row {
+		/* defines a flex container. */
+		display: flex;
+
+			/* determines the direction of each child in a flex container as left-to-right. */
+			flex-direction: row;
+
+			/* will allow a multi-line flex. */
+  			flex-wrap: wrap;
+
 		margin-right: -15px;
 		margin-left: -15px;
 	}
+		.o-row--divider {
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+
+		.o-row--empty-space {
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+
+		.o-column {
+			/* specifies the initial main size of a flex item (100%) */
+ 			flex-basis: 100%;
+		}
+			.o-column__title {
+				font-size: 1.75rem;
+			    font-weight: 700;
+			    font-style: normal;
+			}
+
+			.o-column__description {
+				color: #292a2c;
+				font-size: 1.125rem;
+				font-weight: 300;
+    			font-style: normal;
+    			line-height: 1.5rem;
+			}
+		
+		@media screen and (min-width: 800px) {
+			.o-column {
+				flex: 1;
+			}
+		}
+
 
 
 .o-highlight {
