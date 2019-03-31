@@ -167,7 +167,67 @@
 	margin-bottom: 2rem;
 	width: 25px;
 }
+	.o-divider--big {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+.o-text-align--right {
+	text-align: right;
+}
 
 .o-clearfix {
 	clear: both;
 }
+
+
+.o-form {
+	flex: 0 1 65%;
+	margin-bottom: 1rem;
+}
+	.o-form__header {
+		margin-bottom: 2.5rem;
+	}
+		.o-form__title {
+			font-size: 3rem;
+		}
+
+		.o-form__subtitle {
+			font-size: 1.2rem;
+		}
+
+.o-form__list {
+	margin-left: 0;
+	list-style: none;
+}
+	.o-form__item {
+		margin-bottom: 1rem;
+	}
+		.o-form__control {
+			background: transparent !important;
+			border: 3px solid #C84630;
+			border-radius: 7px;
+			color: #C84630;
+			outline:none;
+			resize: none;
+			padding: .8rem;
+			width: 100%;
+		}
+
+		.o-form__textarea {
+			height: 150px;	
+		}
+
+		.o-form__button {
+			border: 3px solid #C84630;
+			background: transparent;
+			color: $form-color;
+			cursor: pointer;
+			font-weight: 700;
+			padding: 1rem 3rem;
+			transition: 330ms all ease-in-out;
+		}
+			.o-form__button:hover {
+				background: #C84630;
+				color: #fff;
+			}

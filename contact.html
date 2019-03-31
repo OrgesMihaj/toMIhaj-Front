@@ -3,93 +3,117 @@
 <head>
 	<meta charset="UTF-8">
 	
-	<link rel="stylesheet" href="assets/css/elements.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/objects.css">
 	<link rel="stylesheet" href="assets/css/components.css">
 
 	<title>Orges Mihaj</title>
 </head>
 <body>
+		
 	<!-- Header section starts here -->
 	<div class="c-header">
-		<div class="container-fluid">
-			
-			<div class="c-header__title">
-				Orges Mihaj
-			</div>
-			
-			
-			<!-- Nav section starts here -->
-			<div class="c-nav">
-				<ul class="c-nav__list">
-					<li class="c-nav__item">
-						<a href="index.html" class="c-nav__link">Home</a>
-					</li>
 
-					<li class="c-nav__item">
-						<a href="pages/about.html" class="c-nav__link">About</a>
-					</li>
-
-					<li class="c-nav__item">
-						<a href="work.html" class="c-nav__link">Work</a>
-					</li>
-
-					<li class="c-nav__item">
-						<a href="#" class="c-nav__link">Contact Me</a>
-					</li>
-				</ul>
-			</div>
-			<!-- Nav section ends here -->
-
+		<div class="c-header__logo">
+			<a class="c-header__link" href="index.html">OM</a>
 		</div>
+
 	</div>
 	<!-- Header section ends here -->
+
+	<!-- Navigation section starts here -->
+	<div class="c-nav">
+
+		<ul class="c-nav__list">
+			<li class="c-nav__item">
+				<a href="contact.html" class="c-nav__link c-nav__link--is-active">Let's talk.</a>
+			</li>
+
+			<li class="c-nav__item">
+				<a href="work.html" class="c-nav__link">Work.</a>
+			</li>
+
+			<li class="c-nav__item">
+				<a href="about.html" class="c-nav__link">Who?</a>
+			</li>
+
+			<li class="c-nav__item">
+				<a href="index.html" class="c-nav__link">Hi.</a>
+			</li>
+		</ul>
+
+	</div>
+	<!-- Navigation section ends here -->
 	
 	
 	<!-- Main section starts here -->
 	<div class="c-main">
-
+		
 		<div class="o-container">
-			
-			<!-- Contact form starts here -->
-			<form class="o-form">
-				
-				<div class="o-form__group">
-					<div class="o-form__field">
-						<input class="o-form__input" type="email" placeholder="NAME">
+	
+				<!-- Contact section starts here -->
+				<div class="c-contact">
+					
+					<div class="o-row">
+						<form class="o-form">
+
+							<!-- Form header starts here -->
+				    		<div class="o-form__header">
+				    			<h3 class="o-form__title">Contact me</h3>
+								<p class="o-form__subtitle">Send me a message and we'll respond as soon as possible.</p>
+				    		</div>
+				    		<!-- Form header ends here -->
+							
+							<!-- Form list starts here -->
+							<ul class="o-form__list">
+								<li class="o-form__item">
+									<input type="text" class="o-form__control" placeholder="your name">
+								</li>
+
+								<li class="o-form__item">
+									<input type="email	" class="o-form__control" placeholder="your email">
+								</li>
+								
+								<li class="o-form__item">
+									<textarea name="message" class="o-form__control o-form__textarea" placeholder="hi, what's up?"></textarea>
+								</li>
+								
+								<li class="o-form__item">
+									<input type="submit" class="o-form__button" value="send">
+								</li>
+							</ul>
+							<!-- Form list ends here -->
+				        </form>
 					</div>
 
-					<div class="o-form__field">
-						<input class="o-form__input" type="email" placeholder="EMAIL">
+					<div class="o-row">
+						<!-- Social icons section starts here -->
+						<div class="c-social">
+							<ul class="c-social__list">
+								<li class="c-social__item">
+									<a href="#" class="c-social__link social__link--facebook">Fb.</a>
+								</li>
+								<li class="c-social__item">
+									<a href="#" class="c-social__link social__link--instagram">Ins.</a>
+								</li>
+								<li class="c-social__item">
+									<a href="#" class="c-social__link social__link--linkedin">Lin.</a>
+								</li>
+							</ul>
+						</div>
+						<!-- Social icons section ends here -->
 					</div>
-				</div>
 
-				<div class="o-form__field">
-					<textarea class="o-form__textarea" placeholder="MESSAGE"></textarea>
 				</div>
-
-				<div class="o-form__field">
-					<input class="o-button o-button--is-link" type="submit" value="Send">
-				</div>
-			</form>	
-			<!-- Contact form ends here -->
+				<!-- Contact section ends here -->
 
 		</div>
-
+		
 	</div>
 	<!-- Main section ends here -->
+	
 
-
-	<!-- Footer section starts here -->
-	<div class="c-footer">
-		<div class="container">
-			<p class="c-footer__text">
-				&copy; Orges Mihaj. 2019 <br>
-				<span class="c-footer__address">
-					Blagoevgrad, Bulgaria	
-				</span>
-			</p>
-		</div>
-	</div>
-	<!-- Footer section ends here -->
 </body> 
 </html>
