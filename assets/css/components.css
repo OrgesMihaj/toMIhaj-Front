@@ -133,11 +133,17 @@
 		}
 
 
+
 .c-cover {
 	margin-bottom: 10vh;
 }
 
 
+/**
+ *
+ * Project 
+ * 
+ */
 
 .c-project {
 	display: flex;

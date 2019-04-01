@@ -4,10 +4,18 @@
  */
 
 
+
+/**
+ * 
+ * Containers
+ *
+ */
+
 .o-container,
-.o-container--fluid {
-	margin-right: auto;
-	margin-left: auto;
+.o-container-fluid {
+	margin-right: auto; 
+	margin-left: auto;  
+	
 	padding-right: 15px;
     padding-left: 15px;
 }
@@ -16,103 +24,101 @@
 	max-width: 1320px;
 }
 
-.o-container--fluid {
+.o-container-fluid {
     width: 100%;
 }
 
-	.o-row {
-		/* defines a flex container. */
-		display: flex;
+/**
+ * 
+ * Rows
+ *
+ * 1. Defines a flex container.
+ * 2. Determines the direction of each child in a flex container as left-to-right.
+ * 3. Will allow a multi-line flex.
+ * 4. Provides empty space between rows.
+ */
+.o-row {
+	display: flex; /* [1] */
+		flex-direction: row; /* [2] */
+		flex-wrap: wrap; /* [3] */
 
-			/* determines the direction of each child in a flex container as left-to-right. */
-			flex-direction: row;
-
-			/* will allow a multi-line flex. */
-  			flex-wrap: wrap;
-
-		margin-right: -15px;
-		margin-left: -15px;
-	}
-		.o-row--divider {
-			border-top: 1px solid rgba(0, 0, 0, 0.1);
-			margin-top: 3rem;
-			margin-bottom: 3rem;
-		}
-
-		.o-row--small-empty-space {
-			margin-top: .75rem;
-			margin-bottom: .75rem;
-		}
-		
-		.o-row--normal-empty-space {
-			margin-top: 1.5rem;
-			margin-bottom:1.5rem;
-		}
-
-		.o-row--large-empty-space {
-			margin-top: 3rem;
-			margin-bottom: 3rem;
-		}
-
-		.o-column {
-			/* specifies the initial main size of a flex item (100%) */
- 			flex-basis: 100%;
-		}
-			.o-column__row {
-				margin-bottom: 2.5rem;
-			}
-			
-			.o-column__title,
-			.o-column__subtitle {
-				color: #222222;
-			}
-
-			.o-column__title {
-				font-size: 1.75rem;
-			    font-weight: 700;
-			    font-style: normal;
-			}
-
-			.o-column__subtitle {
-				font-size: 1.25rem;
-				margin-bottom: 1rem;
-			}
-
-			.o-column__description {
-				color: #292a2c;
-				display: flex;
-					align-items: center;
-				font-weight: 300;
-    			font-style: normal;
-    			line-height: 1.5rem;
-			}
-
-				.o-column__description--small {
-					font-size: 1rem;
-				}
-
-				.o-column__description--medium {
-					font-size: 1.125rem;
-				}
-
-				.o-column__description--large {
-					font-size: 1.25rem;
-				}
-		
-		@media screen and (min-width: 800px) {
-			.o-column {
-				flex: 1;
-			}
-		}
-
-
-
-.o-highlight {
-	color: #C84630;
-	padding: 0 5px;
-	font-family: "futura-pt-demi"
+	margin-right: -15px;
+	margin-left: -15px;
 }
+	
+	.o-row--divider {
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	
+	
+	.o-row--small-empty-space { /* [4] */
+		margin-top: .75rem;
+		margin-bottom: .75rem;
+	}
+	
+	.o-row--normal-empty-space { /* [4] */
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
 
+	.o-row--large-empty-space { /* [4] */
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+
+/**
+ * 
+ * Columns
+ *
+ * 1. Specifies the initial main size of a flex item (100%).
+ * 2. Align the content of the section vertically centered. 
+ * 
+ */
+.o-column {
+	color: #222222;
+
+	flex-basis: 100%; /* [1] */
+}
+	.o-column__row {
+		margin-bottom: 2.5rem;
+	}
+			
+	.o-column__title {
+		font-size: 1.75rem;
+	    font-weight: 700;
+	}
+
+	.o-column__subtitle {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.o-column__description {
+		color: #292a2c;
+
+		display: flex; /* [2] */
+			align-items: center; /* [2] */
+	}
+
+	.o-column__description--small  { font-size: 1rem; }
+	.o-column__description--medium { font-size: 1.125rem; }
+	.o-column__description--large  { font-size: 1.25rem; }
+		
+	@media screen and (min-width: 800px) {
+		.o-column {
+			flex: 1;
+		}
+	}
+
+
+/**
+ * 
+ * Buttons
+ * 
+ */
 
 .o-button {
 	background: #FFF;
@@ -137,6 +143,12 @@
 		padding: .5rem 1.7rem;
 	}
 
+
+/**
+ * 
+ * Badges
+ * 
+ */
 .o-badge {
 	background: #C84630;
 	border-radius: .25rem;
@@ -151,6 +163,12 @@
 		color: #fff;
 	}
 
+
+/**
+ * 
+ * Icons
+ * 
+ */
 .o-icon {
 	margin-right: 5px;
     margin-left: 15px;
@@ -161,6 +179,12 @@
 		margin-left: 0;
 	}
 
+
+/**
+ * 
+ * Dividers
+ * 
+ */
 .o-divider {
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	margin-top: 2rem;
@@ -172,18 +196,15 @@
 		margin-bottom: 4rem;
 	}
 
-.o-text-align--right {
-	text-align: right;
-}
 
-.o-clearfix {
-	clear: both;
-}
-
-
+/**
+ * 
+ * Forms
+ * 
+ */
 .o-form {
 	flex: 0 1 65%;
-	margin-bottom: 1rem;
+		margin-bottom: 1rem;
 }
 	.o-form__header {
 		margin-bottom: 2.5rem;
@@ -231,3 +252,24 @@
 				background: #C84630;
 				color: #fff;
 			}
+
+
+/**
+ * 
+ * Utilities
+ * 
+ */
+
+.o-text-align--right {
+	text-align: right;
+}
+
+.o-clearfix {
+	clear: both;
+}
+
+.o-highlight {
+	color: #C84630;
+	padding: 0 5px;
+	font-family: "futura-pt-demi"
+}
