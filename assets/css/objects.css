@@ -169,11 +169,13 @@
  * Icons
  * 
  */
-.o-icon {
-	margin-right: 5px;
-    margin-left: 15px;
-	width: 1rem;
-	height: 1rem;
+.o-icon {    
+	margin-right: 4px;
+    /*margin-left: 3px;*/
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    height: 1.5rem;
 }
 	.o-icon:first-child {
 		margin-left: 0;
