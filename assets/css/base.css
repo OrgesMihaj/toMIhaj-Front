@@ -77,9 +77,12 @@ table {
 }
 
 
-img {
+img,
+video {
 	width: 100%;
 }
+
+
 
 /**
  * Headings

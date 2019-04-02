@@ -98,21 +98,29 @@
 
 	.o-column__description {
 		color: #292a2c;
-
-		display: flex; /* [2] */
-			align-items: center; /* [2] */
 	}
 
 	.o-column__description--small  { font-size: 1rem; }
 	.o-column__description--medium { font-size: 1.125rem; }
 	.o-column__description--large  { font-size: 1.25rem; }
 		
+
+	.o-column_link {
+		border-bottom: 1px dotted #000; 
+		color: #000;
+		font-weight: 500;
+		padding-bottom: 3px;
+	}
+		.o-column_link:hover {
+			color: #000;
+		}
+
 	@media screen and (min-width: 800px) {
 		.o-column {
 			flex: 1;
 		}
 	}
-
+	
 
 /**
  * 
@@ -155,9 +163,12 @@
 	color: #fff;
 	display: inline-block;
 	font-size: .9rem;
-	font-weight: 300;
-	margin: 0 5px;
+	font-weight: 500;
+	margin-left: 5px;
+	margin-right: 5px;
     padding: .05em .4em;
+    position: relative;
+    	bottom: 2px;
 }
 	.o-badge:hover {
 		color: #fff;
@@ -171,7 +182,6 @@
  */
 .o-icon {    
 	margin-right: 4px;
-    /*margin-left: 3px;*/
     width: 1.5rem;
     vertical-align: middle;
     margin-bottom: 5px;

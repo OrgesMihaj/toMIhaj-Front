@@ -87,7 +87,7 @@
 
 	.c-nav .c-nav__item {
 		display: inline-block;
-		margin-left: 25px;
+		margin-left: 20px;
 		margin-top: 5px;
 	}
 		.c-nav .c-nav__item:first-child {
@@ -99,6 +99,7 @@
 			font-size: .85rem;
 			letter-spacing: .4px;
 			transition: color 330ms ease-in-out;
+			padding: 10px 5px 4px 5px;
 		}
 			.c-nav .c-nav__link:hover {
 				color: #000;
@@ -107,7 +108,7 @@
 		.c-nav .c-nav__link--is-active {
 			background: #FAF6A7;
 			color: #000;
-			padding: 10px 5px 4px 5px;
+			/*padding: 10px 5px 4px 5px;*/
 		}
 
 
@@ -207,22 +208,33 @@
 .c-project {
 	display: flex;
 }
-
 	.c-project__cover {
 		flex: 1 0 55%;
 		position: relative;
 		z-index: 1;
 	}	
 		.c-project__cover:before {
-			content: "";
+			content: '';
 		    
 		    background: #F2F3F4;
 		    position: absolute;
-    			top: .2rem; left: .25rem;
+    			top: .7rem; left: .7rem;
 		        
-	        height: 100%;
+	        height: 300px;
 	        width: 100%;
 		    z-index: -1;
+		}
+
+		.c-project__image {
+			height: 300px;
+		}
+
+		.c-project__categories {
+			color: #303030;
+		    font-size: .9rem;
+		    font-weight: 700;
+		    margin: 20px 10px;
+		    letter-spacing: .03rem;
 		}
 
 	.c-project__details {
@@ -231,12 +243,12 @@
 	}
 		.c-project__name {
 			color: #303030;
-			font-size: 3.25rem;
+			font-size: 2.25rem;
 			margin-bottom: 1.5rem;
 		}
 
 		.c-project__description {
 			color: #999;
-		    font-size: 1.25rem;
+		    font-size: 1.1rem;
 		    letter-spacing: .03rem;
 		}

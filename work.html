@@ -11,7 +11,8 @@
 
 	<title>Orges Mihaj</title>
 </head>
-<body>
+<body id="app">
+	<div class="c-side-line" id="sideLine"></div>
 		
 	<!-- Header section starts here -->
 	<div class="c-header">
@@ -19,6 +20,8 @@
 		<div class="c-header__logo">
 			<a class="c-header__link" href="index.html">OM</a>
 		</div>
+		
+		<div class="c-header_dotted-horizontal-border"></div>
 
 	</div>
 	<!-- Header section ends here -->
@@ -40,7 +43,7 @@
 			</li>
 
 			<li class="c-nav__item">
-				<a href="index.html" class="c-nav__link">Hi.</a>
+				<a href="index.html" class="c-nav__link">Hello.</a>
 			</li>
 		</ul>
 
@@ -62,7 +65,13 @@
 					<div class="c-project">
 						
 						<div class="c-project__cover">
-							<img src="assets/images/projects/3handymen.png" alt="3handymen">
+							<img class="c-project__image" src="assets/images/projects/3handymen.png" alt="3handymen">
+						
+							<p class="c-project__categories">
+								<span class="o-badge">Motion Design </span>
+								/
+								<span class="o-badge">Front-end Development</span>
+							</p>
 						</div>
 						
 						<div class="c-project__details">
@@ -105,7 +114,11 @@
 						</div>
 
 						<div class="c-project__cover">
-							<img src="assets/images/projects/root.png" alt="3handymen">
+							<img class="c-project__image" src="assets/images/projects/root.png" alt="3handymen">
+
+							<p class="c-project__categories">
+								<span class="o-badge">Front-end Development</span>
+							</p>
 						</div>
 
 					</div>
@@ -121,5 +134,16 @@
 		<br><br><br>
 	</div>
 	<!-- Main section ends here -->
+
+	<script>
+		let app = document.getElementById('app');
+
+
+		window.addEventListener("scroll", function () {
+			let appPosition = app.getBoundingClientRect();
+
+			document.getElementById('sideLine').style.height = 200 + (-appPosition.top) + "px";
+		});
+	</script>
 </body> 
 </html>
