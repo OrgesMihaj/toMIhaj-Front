@@ -1,15 +1,43 @@
 
+.c-side-line {
+	border-left: 5px solid #FAF6A7;
+	content: '';
+	position: absolute;
+		top: 40px; left: 4rem;
+	height: 200px;
+	width: 5px;
+	z-index: -1;
+}
+
 /**
  * Header component
- * 
+ *
  */
 
 .c-header {
-	display: flex;
-		justify-content: space-between;
-		align-items: center;
 	padding: 2rem 4rem;
+	position: relative;
 }	
+	.c-header::after,
+	.c-header::before {
+		content: '';
+		position: absolute;
+			top: 35px; left: 4rem;
+		z-index: -1;
+	}
+
+	.c-header::after {
+		border-top: 5px solid #FAF6A7;
+		height: 5px;
+		width: 25vw;
+	}
+
+	.c-header::before {
+		border-left: 5px solid #FAF6A7;
+		height: 20vh;
+		width: 5px;
+	}
+
 	.c-header__logo {		
 		display: inline-block;
 		font-size: 2rem;
@@ -19,15 +47,19 @@
 	}
 	
 	.c-header__link {
-		background: #FFEA00;
+		background: #FAF6A7;
 		color: #41463D;
 		padding: 0 5px;
-		transition: all 330ms ease-in-out;
+		position: relative;
+	}		
+
+	.c-header_dotted-horizontal-border {
+		border-top: 5px dotted #FAF6A7;
+		content: '';
+		position: absolute;
+			left: 29vw; top: 2.2rem;
+		width: 60px;
 	}
-		.c-header__link:hover {
-			background: #41463D;
-			color: #FFEA00;
-		}
 
 /**
  * Nav component
@@ -35,22 +67,37 @@
  */
 
 .c-nav {
-	font-weight: 300;
+	border-top: 5px solid #FAF6A7;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 700;
 	position: fixed;
-	    top: 40%; left: 4.8rem;
-
+	    top: 40%; left: 4rem;
+	
 	transform: rotate(270deg) translate(-50%,50%);
 	transform-origin: left center;
     z-index: 100;
 }
+	.c-nav::after {
+		border-top: 5px dotted #FAF6A7;
+		content: '';
+		position: absolute;
+			top: -5px; right: 301px;
+		width: 50px;
+	}
+
 	.c-nav .c-nav__item {
 		display: inline-block;
 		margin-left: 25px;
+		margin-top: 5px;
 	}
+		.c-nav .c-nav__item:first-child {
+			margin-left: 0;
+		}
+
 		.c-nav .c-nav__link {
-			font-family: "futura-pt-demi";
 			color: #999;
-			font-size: 1.2rem;
+			font-size: .85rem;
+			letter-spacing: .4px;
 			transition: color 330ms ease-in-out;
 		}
 			.c-nav .c-nav__link:hover {
@@ -58,9 +105,9 @@
 			}
 
 		.c-nav .c-nav__link--is-active {
-			background: #FFEA00;
-			color: #41463D;
-			padding: 0 5px;
+			background: #FAF6A7;
+			color: #000;
+			padding: 10px 5px 4px 5px;
 		}
 
 

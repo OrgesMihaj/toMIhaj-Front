@@ -42,7 +42,9 @@ html {
 	/* The padding and border are included in the width and height */
 	box-sizing: border-box;
 
-	font-family: "futura-pt-book";
+	/*font-family: "futura-pt-book";*/
+	font-family: 'Roboto', sans-serif;
+
 	font-size: 16px;
 	font-weight: 300;
 	
@@ -62,6 +64,11 @@ fieldset, legend {
 	padding: 0;
 }
 
+
+body {
+	position: relative;
+	height: 100%;
+}
 
 /* Remove default table spacing. */
 table {

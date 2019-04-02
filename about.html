@@ -3,13 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Roboto:300,400,500" rel="stylesheet">
+	
 	<link rel="stylesheet" href="assets/css/base.css">
 	<link rel="stylesheet" href="assets/css/objects.css">
 	<link rel="stylesheet" href="assets/css/components.css">
 
 	<title>Orges Mihaj</title>
 </head>
-<body>
+<body id="app">
+	<div class="c-side-line" id="sideLine"></div>
+
 	<!-- Header section starts here -->
 	<div class="c-header">
 
@@ -21,20 +25,23 @@
 	<!-- Header section ends here -->
 
 	<!-- Navigation section starts here -->
-	<div class="c-nav">
+	<div class="c-nav" id="nav">
 
 		<ul class="c-nav__list">
 			<li class="c-nav__item">
 				<a href="contact.html" class="c-nav__link">Let's talk.</a>
 			</li>
+
 			<li class="c-nav__item">
 				<a href="work.html" class="c-nav__link">Work.</a>
 			</li>
+
 			<li class="c-nav__item">
 				<a href="about.html" class="c-nav__link c-nav__link--is-active">Who?</a>
 			</li>
+
 			<li class="c-nav__item">
-				<a href="index.html" class="c-nav__link">Hi.</a>
+				<a href="index.html" class="c-nav__link">Hello.</a>
 			</li>
 		</ul>
 
@@ -271,6 +278,16 @@
 
 	</div>
 	<!-- Main section ends here -->
+	
+	<script>
+		let app = document.getElementById('app');
 
+
+		window.addEventListener("scroll", function () {
+			let appPosition = app.getBoundingClientRect();
+
+			document.getElementById('sideLine').style.height = 200 + (-appPosition.top) + "px";
+		});
+	</script>
 </body> 
 </html>
