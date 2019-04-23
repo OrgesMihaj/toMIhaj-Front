@@ -1,0 +1,66 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+/**
+ * `.u-font` class allows usage of a series of utility classes that can adjust
+ * `font-weight` and `font-size`.
+ *
+ *	<h3 class="u-font u-font--size-3_4 u-font--weigh-700">...</h3>
+ *
+ */
+
+.u-font {
+
+	/**
+	 * Create a series of `font-weight` classes with numeric keyword values
+	 * from 100 to 900.
+	 */
+
+    @for $i from 1 to 10 {
+        $weightValue: $i * 100;
+
+		// Build a class in the format `.u-font.u-font--weight-300`.
+
+        &.u-font--weight-#{$weightValue} {
+            font-weight: $weightValue;
+        }
+    }
+
+	/**
+	 * Create a series of `font-size` classes based on rem unit
+	 *
+	 * 1. Define rem values from 0 to 10
+	 * 2. Build a class in the format `.u-font.u-font--size-3`
+	 *
+	 *	  .u-font.u-font--size-3 {
+	 *	  	  font-size: 3rem;
+	 *	  }
+	 *
+	 * 3. Define rem values from .0 to .9 in case we want to use decimal numbers
+	 * 4. Calculate the final font size
+	 * 5. Build a class in the format `.u-font.u-font--size-3_4`
+	 *
+	 *	  .u-font.u-font--size-3_4 {
+	 *	  	  font-size: 3.4rem;
+	 *	  }
+	 */
+
+    @for $value from 0 to 10 { /* [1] */
+
+        &.u-font--size-#{$value} { /* [2] */
+            font-size: $value * 1rem;
+        }
+
+        @for $decimal from 0 to 10 { /* [3] */
+            $decimal: $decimal / 10; /* [3] */
+
+            $size: $value + $decimal; /* [4] */
+
+            &.u-font--size-#{$value}_#{$decimal * 10} { /* [5] */
+                font-size: $size * 1rem;
+            }
+        }
+    }
+
+} /* </u-font> */

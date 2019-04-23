@@ -1,0 +1,70 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+// Services
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+
+/**
+ *
+ * 1. Position scrollbar behind the cover.
+ * 2. Make the services section scrollable for tablets in landscape mode. 
+ * 
+ *    The height of the services section and the cover is set to 
+ *    100% of viewport height. To avoid setting cover position as fixed,
+ *    the services section is made scrollable. (tabletes in landscape 
+ *    and up)
+ *    
+ * 3. VueJS transitions (https://vuejs.org/v2/guide/transitions.html)
+ *    
+ */
+
+.c-services {
+	
+	padding: 2rem 2rem 2rem 1rem;
+
+	@include for-size(tablet-portrait-up) {
+		padding: 3.5rem 1rem 0 1rem;
+	}
+
+	@include for-size(tablet-landscape-up) {
+		padding: 3rem 1.5rem 0 1.5rem;
+		margin-right: -14px; /* [1] */
+		overflow-y: scroll;  /* [2] */
+		height: 100vh;
+	}
+
+	@include for-size(desktop-up) {
+		padding: 3rem 2rem 0 2rem;
+	}
+
+	@include for-size(big-desktop-up) {
+		padding: 5rem 4rem 0 4rem;
+	}
+
+
+	.c-services__list {
+
+		@include for-size(phone-only) {
+			margin: 0;
+		}
+
+		.c-services__item {
+
+			margin-bottom: 1rem;
+
+		}
+
+	} /* </services__list> */
+
+
+	/* <transition> */
+	.c-services--fade-enter, 
+	.c-services--fade-leave {
+		opacity: 0; /* [3] */
+	}
+	
+	.c-services--fade-enter-active,
+	.c-services--fade-leave-active {
+		transition: opacity 330ms; /* [3] */
+	}
+	/* </transition> */
+
+} /* </services> */

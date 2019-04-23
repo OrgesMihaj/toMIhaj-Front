@@ -1,0 +1,50 @@
+/*------------------------------------*\
+  #lOADER
+\*------------------------------------*/
+
+
+// Responsible for shimming effect in loader shpae
+@keyframes placeHolderShimmer {
+	0%   { background-position: -468px 0; }
+	100% { background-position: 468px 0;  }
+}
+
+.c-loader--fade-in-enter-active {
+	animation-name: fadeIn;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: backwards;
+}
+
+// Style the loader shape similar to the article shape
+.c-loader {
+	display: flex;
+		flex-direction: column;
+	padding: 5% 8%;
+
+	.c-loader__title, .c-loader__content {
+        // animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+		animation: placeHolderShimmer 1.5s linear infinite normal forwards;
+
+		background: #f6f7f8;
+		background: linear-gradient(to right, #eeeeee 8%, #E4E4E4 18%, #eeeeee 33%);
+		background-size: 800px 104px;
+	}
+
+	.c-loader__title {
+		width: 55%;
+		height: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.c-loader__content {
+		height: .4rem;
+		margin-bottom: .5rem;
+
+		&:nth-child(2) { width: 90%; }
+		&:nth-child(3) { width: 95%; }
+		&:nth-child(4) { width: 65%; }
+
+	}
+
+} /* </c-loader> */

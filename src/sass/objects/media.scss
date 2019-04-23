@@ -1,0 +1,44 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+// Media
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+.o-media {
+	
+	display: flex;
+	margin-bottom: 1rem;
+	
+	.o-media__image {
+		
+		flex: 0 0 40px;
+		height: 40px;
+			
+		@include for-size(tablet-portrait-up) {
+			flex: 0 0 70px;
+			height: 70px;
+		}
+
+	} /* </o-media__image> */
+
+	.o-media__details {
+		
+		margin-left: 1.5rem;
+
+		.o-media__name {
+			margin-bottom: .7rem;
+		}
+
+		.o-media__description {
+			color: #404040;
+			font-size: 1rem;
+			line-height: 1.5;
+
+			@include for-size(tablet-portrait-up) {
+				font-size: 1.1rem;
+			}
+			
+		} /* </o-media__description> */
+
+	} /* </o-media__details> */
+
+} /* </o-media> */

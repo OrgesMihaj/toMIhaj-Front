@@ -1,0 +1,72 @@
+.o-form {
+	
+	color: $form-color;
+	padding-right: 25px;
+	padding-left: 25px;
+	
+	.o-form__header {
+		margin-bottom: 2.5rem;
+
+		.o-form__title {
+			font-size: 3rem;
+
+			@include for-size(phone-only) {
+				font-size: 1.5rem;
+			}
+		}
+
+		.o-form__subtitle {
+			font-size: 1.2rem;
+
+			@include for-size(phone-only) {
+				font-size: 1rem;
+			}
+		}
+
+	} /* </o-form__header> */
+
+	.o-form__list {
+		margin-left: 0;
+
+		.o-form__item {
+			margin-bottom: 1rem;
+			
+			.o-form__control {
+				background: transparent !important;
+				border: 3px solid $form-color;
+				border-radius: 7px;
+				color: $form-color;
+				outline:none;
+				resize: none;
+				padding: .8rem;
+				width: 100%;
+
+				@include input-placeholder {
+					color: $form-color;
+				}
+			}
+			
+			.o-form__textarea {
+				height: 150px;	
+			}
+
+			.o-form__button {
+				border: 3px solid $form-color;
+				background: transparent;
+				color: $form-color;
+				cursor: pointer;
+				font-weight: 700;
+				padding: 1rem 3rem;
+				transition: 330ms all ease-in-out;
+
+				&:hover {
+					background: $form-color;
+					color: $contact-form-background-color;
+				}
+			} /* </o-form__button> */ 
+
+		} /* </o-form__item> */
+
+	} /* </o-form__list> */
+
+} /* </o-form> */

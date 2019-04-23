@@ -1,0 +1,66 @@
+/*------------------------------------*\
+  #TEXT
+\*------------------------------------*/
+
+/**
+ * `.u-text` class allows usage of a series of utility classes related to
+ *  text properties.
+ *
+ *	<p class="u-text u-text--uppercase u-text--line-height-1_5">...</p>
+ *
+ */
+
+.u-text {
+
+    // Text transformations
+    &.u-text--uppercase { text-transform: uppercase; }
+    &.u-text--lowercase { text-transform: lowercase; }
+
+    // Text alignments
+    &.u-text--align-left   { text-align: left;   }
+    &.u-text--align-center { text-align: center; }
+    &.u-text--align-right  { text-align: right;  }
+
+    // Text decorations
+    &.u-text--decoration-none { text-decoration: none; }
+    &.u-text--decoration-underline { text-decoration: underline; }
+
+	/**
+	 * Create a series of "unitless" `line-height` classes
+	 *
+	 * 1. Define line height values from 1 to 3
+	 * 2. Build a class in the format `.u-font.u-font--size-3`
+	 *
+	 *	  .u-text.u-text--line-height-2 {
+	 *	  	  line-height: 2;
+	 *	  }
+	 *
+	 * 3. Define values from .0 to .9 in case we want to use decimal numbers
+	 * 4. Calculate the final line height
+	 * 5. Build a class in the format `.u-text.u-text--line-height-1_5`
+	 *
+	 *	  .u-text.u-text--line-height-1_5 {
+	 *	  	  line-height: 1.5;
+	 *	  }
+	 */
+
+    @for $value from 1 to 3 { /* [1] */
+
+        &.u-text--line-height-#{$value} { /* [2] */
+            line-height: $value;
+        }
+
+        @for $decimal from 0 to 10 { /* [3] */
+
+            $decimal: $decimal / 10; /* [3] */
+
+            $lineHeight: $value + $decimal; /* [4] */
+
+            &.u-text--line-height-#{$value}_#{$decimal * 10} { /* [5] */
+                line-height: $lineHeight;
+            }
+        }
+
+    }
+
+} /* </u-text> */

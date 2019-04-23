@@ -1,0 +1,57 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+// Layouts
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+/**
+ * 1. Two-dimensional layout system which can can handle 
+ *    both columns and rows. 
+ *    (https://css-tricks.com/snippets/css/complete-guide-grid/)
+ *
+ * 2. Center the content inside the cover both vertically and horizontally.
+ *    (https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+ */
+
+
+.o-layout {
+	display: grid; /* [1] */ 
+
+
+	&.o-layout--2 {
+		grid-template-rows: auto;
+
+		@include for-size(phone-only) {
+			grid-template-columns: 1fr;
+		}
+	
+		@include for-size(tablet-portrait-up) {
+			grid-template-columns: 1fr;
+		}
+
+		@include for-size(tablet-landscape-up) {
+			grid-template-columns: 1fr 40%;
+		}
+
+		@include for-size(desktop-up) {
+			grid-template-columns: 1fr 1fr;
+		}
+	
+		.o-layout__element {
+
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+
+		} /* </o-layout__element> */
+
+		.o-layout__element--centered {
+
+			display: flex; /* [2] */
+				align-items: center; /* [2] */
+			    justify-content: center; /* [2] */
+
+		} /* </o-layout__element--centered> */
+
+	} /* </o-layout--2> */
+	
+} /* </o-layout> */

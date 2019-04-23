@@ -1,0 +1,96 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+// Cover
+// - - - - - - - - - - - - - - - - - - - - - - - - 
+
+
+/**
+ * The cover is a container for the cover image. At first, it loads a tiny image
+ * which is a minimized version of the original one. After the original image or
+ * the real image is loaded, it will replace the tiny image with the original one.
+ *
+ * This technique is called `progressive image loading`.
+ *
+ * 
+ * 1. Default cover `background` color. Sourced from the color variables file.
+ *
+ * 2. Determine the grid cell that the content is going to be position.
+ *    (https://css-tricks.com/snippets/css/complete-guide-grid/)
+ *
+ * 3. Relative to 1% of the height of the viewport.
+ *    (https://www.w3schools.com/cssref/css_units.asp)
+ *
+ * 4. The image will be hidden at first and only after it is fully loaded, 
+ *    it will be displayed. 
+ *
+ * 5. Fit the image and keep the aspect ratio.
+ *    (https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+ * 
+ * 6. Position image in bottom-left corner.
+ *
+ * 7. If the tiny image is loaded `.c-cover__image--blurry` class will be applied. 
+ *
+ * 8. The `.c-cover__image--loaded` class is applied when the cover image is 
+ *    loaded to give full visibility to the image.
+ *
+ * 9. Overlap the services' scrollbar when it is present. 
+ */
+	
+.c-cover {
+
+	background-color: $cover-background-color; /* [1] */
+
+	grid-column: 1/2; /* [2] */ 
+	grid-row: 1/2; /* [2] */
+
+	height: 25vh; /* [3] */
+	
+	@include for-size(tablet-portrait-up) {
+		height: 45vh;
+	}
+
+	@include for-size(tablet-landscape-up) {
+		grid-column: 2/3; /* [2] */
+		height: 100vh; /* [3] */
+	}
+
+	.c-cover__image {
+		
+		opacity: 0; /* [4] */
+		object-fit: cover; /* [5] */
+
+		position: absolute; /* [6] */
+			bottom: 0; left: 0; /* [6] */
+
+	    min-height: 100%;
+	    min-width: 100%;
+
+		transition: all 1s linear;
+
+		&.c-cover__image--blurry { /* [7] */
+			filter: blur(50px);
+			transform: scale(1);
+		}
+
+		&.c-cover__image--loaded { /* [8] */
+			opacity: 1;
+		}
+
+	} /* </cover__image> */
+	
+	
+	.c-cover__info {
+		color: $cover-info-color;
+
+		display: flex;
+			align-items: center;
+			flex-direction: column;
+
+		height: 100%;
+		position: relative;
+		width: 100%;
+
+		z-index: 1; /* [10] */
+	
+	} /* </c-cover__info> */
+
+} /* </c-cover> */

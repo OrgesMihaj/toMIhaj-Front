@@ -11,6 +11,8 @@ import Error from './pages/Error';
 // components
 import Navigation from './components/Navigation';
 
+import './App.scss';
+
 class App extends Component {
     render() {
         return (

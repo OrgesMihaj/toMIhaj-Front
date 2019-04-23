@@ -22,6 +22,8 @@ const Navigation = () => {
     		</ul>
     	</nav>
         // Navigation section starts here
+
+
     )
 }
 
