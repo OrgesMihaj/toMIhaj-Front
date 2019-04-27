@@ -1,0 +1,116 @@
+/**
+ *
+ * Containers
+ *
+ */
+
+.o-container,
+.o-container-fluid {
+	margin-right: auto;
+	margin-left: auto;
+
+	padding-right: 15px;
+    padding-left: 15px;
+}
+
+.o-container {
+	max-width: 1320px;
+}
+
+.o-container-fluid {
+    width: 100%;
+}
+
+/**
+ *
+ * Rows
+ *
+ * 1. Defines a flex container.
+ * 2. Determines the direction of each child in a flex container as left-to-right.
+ * 3. Will allow a multi-line flex.
+ * 4. Provides empty space between rows.
+ */
+.o-row {
+	display: flex; /* [1] */
+		flex-direction: row; /* [2] */
+		flex-wrap: wrap; /* [3] */
+
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+	.o-row--divider {
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+
+	.o-row--small-empty-space { /* [4] */
+		margin-top: .75rem;
+		margin-bottom: .75rem;
+	}
+
+	.o-row--normal-empty-space { /* [4] */
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.o-row--large-empty-space { /* [4] */
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+
+/**
+ *
+ * Columns
+ *
+ * 1. Specifies the initial main size of a flex item (100%).
+ * 2. Align the content of the section vertically centered.
+ *
+ */
+.o-column {
+	color: #222222;
+
+	flex-basis: 100%; /* [1] */
+}
+	.o-column__row {
+		margin-bottom: 2.5rem;
+	}
+
+	.o-column__title {
+		font-size: 1.75rem;
+	    font-weight: 700;
+	}
+
+	.o-column__subtitle {
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.o-column__description {
+		color: #292a2c;
+	}
+
+	.o-column__description--small  { font-size: 1rem; }
+	.o-column__description--medium { font-size: 1.125rem; }
+	.o-column__description--large  { font-size: 1.25rem; }
+
+
+	.o-column_link {
+		border-bottom: 1px dotted #000;
+		color: #000;
+		font-weight: 500;
+		padding-bottom: 3px;
+	}
+		.o-column_link:hover {
+			color: #000;
+		}
+
+	@media screen and (min-width: 800px) {
+		.o-column {
+			flex: 1;
+		}
+	}
+	

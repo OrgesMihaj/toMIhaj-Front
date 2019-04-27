@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Roboto:300,400,500');
+
+@font-face{
+    font-family: "futura-pt-book";
+
+    src: url("assets/fonts/FuturaPTBook.otf") format("woff"),
+    	 url("assets/fonts/FuturaPTBook.otf") format("opentype"),
+    	 url("assets/fonts/FuturaPTBook.otf") format("truetype");
+}
+
+@font-face{
+    font-family:"futura-pt-extra-bold-italic-regular";
+
+    src: url("assets/fonts/FuturaPTExtraBoldOblique.otf") format("woff"),
+         url("assets/fonts/FuturaPTExtraBoldOblique.otf") format("opentype"),
+    	 url("assets/fonts/FuturaPTExtraBoldOblique.otf") format("truetype");
+}
+
+@font-face{
+    font-family:"futura-pt-demi";
+
+    src: url("assets/fonts/FuturaPTDemi.otf") format("woff"),
+         url("assets/fonts/FuturaPTDemi.otf") format("opentype"),
+    	 url("assets/fonts/FuturaPTDemi.otf") format("truetype");
+}

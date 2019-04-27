@@ -7,17 +7,17 @@ const Navigation = () => {
     	<nav className="c-nav">
     		<ul className="c-nav__list">
     			<li className="c-nav__item">
-                    <NavLink className="c-nav__link" to="/contact">Work.</NavLink>
+                    <NavLink className="c-nav__link" activeClassName='c-nav__link--is-active' to="/contact">Let's talk.</NavLink>
     			</li>
     			<li className="c-nav__item">
-                    <NavLink className="c-nav__link" to="/portfolio">Work.</NavLink>
+                    <NavLink className="c-nav__link" activeClassName='c-nav__link--is-active' to="/portfolio">Work.</NavLink>
 
     			</li>
     			<li className="c-nav__item">
-                    <NavLink className="c-nav__link" to="/about">Who?</NavLink>
+                    <NavLink className="c-nav__link" activeClassName='c-nav__link--is-active' to="/about">Who?</NavLink>
     			</li>
     			<li className="c-nav__item">
-                    <NavLink className="c-nav__link c-nav__link--is-active" to="/">Hi.</NavLink>
+                    <NavLink className="c-nav__link" activeClassName='c-nav__link--is-active' to="/" exact>Hello.</NavLink>
     			</li>
     		</ul>
     	</nav>

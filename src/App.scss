@@ -31,13 +31,6 @@
  * =Media................Generic media module.
  *
  * COMPONENTS
- * =Cover................Cover's background image, title and subtitle
- * =Contact..............Styles for the contact numbers and the email icon
- * 						 positioned at the bottom of the cover and
- * 						 for the contact form that is visible when the user
- * 						 clicks the email icon in the cover section.
- * =Logo.................Logo positioning and animations.
- * =Services.............Styles related to the services section in the main view.
  *
  * UTILITTIES
  * =Fonts................a series of utility classes that can adjust `font-weight`
@@ -47,37 +40,47 @@
 
 
 // Settings
-@import "sasss/settings/global";
-@import "sasss/settings/colors";
+@import "assets/sass/settings/global";
+@import "assets/sass/settings/colors";
 
 // Tools
-@import "sasss/tools/mixin";
+@import "assets/sass/tools/mixin";
 
 // Generic
-@import "sasss/generic/normalize";
-@import "sasss/generic/box-sizing";
-@import "sasss/generic/reset";
-@import "sasss/generic/shared";
+@import "assets/sass/generic/normalize";
+@import "assets/sass/generic/box-sizing";
+@import "assets/sass/generic/reset";
+@import "assets/sass/generic/shared";
 
 // Elements
-@import "sasss/elements/headings";
-@import "sasss/elements/images";
-@import "sasss/elements/links";
-@import "sasss/elements/page";
+@import "assets/sass/elements/headings";
+@import "assets/sass/elements/images";
+@import "assets/sass/elements/links";
+@import "assets/sass/elements/page";
+@import "assets/sass/elements/fonts";
 
-// Object
-@import "sasss/objects/animations";
-@import "sasss/objects/forms";
-@import "sasss/objects/layouts";
-@import "sasss/objects/loader";
-@import "sasss/objects/media";
 
-// Component
-@import "sasss/components/cover";
-@import "sasss/components/contact";
-@import "sasss/components/logo";
-@import "sasss/components/services";
+// Objects
+@import "assets/sass/objects/forms";
+@import "assets/sass/objects/layouts";
+@import "assets/sass/objects/loader";
+@import "assets/sass/objects/media";
+@import "assets/sass/objects/badges";
+@import "assets/sass/objects/buttons";
+@import "assets/sass/objects/dividers";
+@import "assets/sass/objects/icons";
+
+
+// Components
+@import "assets/sass/components/nav";
+@import "assets/sass/components/header";
+@import "assets/sass/components/introduction";
+@import "assets/sass/components/main";
+@import "assets/sass/components/projects";
+@import "assets/sass/components/social";
+@import "assets/sass/components/cover";
+
 
 // Utilities
-@import "sasss/utilities/fonts";
-@import "sasss/utilities/text";
+@import "assets/sass/utilities/fonts";
+@import "assets/sass/utilities/text";

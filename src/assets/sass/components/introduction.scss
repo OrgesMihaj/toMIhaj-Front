@@ -1,0 +1,49 @@
+/**
+ * Introduction component.
+ *
+ */
+
+.c-introduction {
+
+}
+	.c-introduction__content {
+	    color: #303030;
+	    font-size: 3.75vw;
+	    line-height: 150%;
+	    margin-bottom: 1.2rem;
+	    z-index: 2;
+	}
+
+	.c-introduction__additional {
+	    color: #999;
+	    font-size: 1.1rem;
+	    font-weight: 500;
+	    margin-bottom: 5vh;
+	    letter-spacing: .03rem;
+	    line-height: 180%;
+	}
+
+	.c-introduction__link {
+		border-bottom: 1px dotted #000;
+		padding-bottom: 3px;
+		text-decoration: none;
+
+		transition: color 330ms ease-in-out;
+	}
+		.c-introduction__link:hover {
+			color: #000;
+		}
+
+.o-text-align--right {
+	text-align: right;
+}
+
+.o-clearfix {
+	clear: both;
+}
+
+.o-highlight {
+	color: #C84630;
+	padding: 0 5px;
+	font-family: "futura-pt-demi"
+}

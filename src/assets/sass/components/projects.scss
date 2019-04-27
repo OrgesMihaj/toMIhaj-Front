@@ -1,0 +1,54 @@
+/**
+ *
+ * Project
+ *
+ */
+
+.c-project {
+	display: flex;
+}
+	.c-project__cover {
+		flex: 1 0 55%;
+		position: relative;
+		z-index: 1;
+	}
+		.c-project__cover:before {
+			content: '';
+
+		    background: #F2F3F4;
+		    position: absolute;
+    			top: .7rem; left: .7rem;
+
+	        height: 300px;
+	        width: 100%;
+		    z-index: -1;
+		}
+
+		.c-project__image {
+			height: 300px;
+			width: 100%;
+		}
+
+		.c-project__categories {
+			color: #303030;
+		    font-size: .9rem;
+		    font-weight: 700;
+		    margin: 20px 10px;
+		    letter-spacing: .03rem;
+		}
+
+	.c-project__details {
+		flex: 1 0 45%;
+		padding: 1rem 2.5rem;
+	}
+		.c-project__name {
+			color: #303030;
+			font-size: 2.25rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.c-project__description {
+			color: #999;
+		    font-size: 1.1rem;
+		    letter-spacing: .03rem;
+		}
