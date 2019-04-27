@@ -195,8 +195,16 @@
 
 
 .c-cover {
+	display: flex;
 	margin-bottom: 10vh;
+	width: 100%;
 }
+	.c-cover img {
+		width: 50%;
+	}
+	.c-cover iframe {
+		width: 50%;
+	}
 
 
 /**

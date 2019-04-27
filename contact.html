@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Roboto:300,400,500" rel="stylesheet" />
 	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/objects.css">
-	<link rel="stylesheet" href="assets/css/components.css">
-
+	<link rel="stylesheet" href="assets/css/base.css" />
+	<link rel="stylesheet" href="assets/css/objects.css" />
+	<link rel="stylesheet" href="assets/css/components.css" />
+	
 	<title>Orges Mihaj</title>
 </head>
 <body>
@@ -19,6 +19,8 @@
 		<div class="c-header__logo">
 			<a class="c-header__link" href="index.html">OM</a>
 		</div>
+		
+		<div class="c-header_dotted-horizontal-border"></div>
 
 	</div>
 	<!-- Header section ends here -->
@@ -40,7 +42,7 @@
 			</li>
 
 			<li class="c-nav__item">
-				<a href="index.html" class="c-nav__link">Hi.</a>
+				<a href="index.html" class="c-nav__link">Hello.</a>
 			</li>
 		</ul>
 
@@ -57,7 +59,7 @@
 				<div class="c-contact">
 					
 					<div class="o-row">
-						<form class="o-form">
+						<form class="o-form" action="">
 
 							<!-- Form header starts here -->
 				    		<div class="o-form__header">
@@ -69,19 +71,20 @@
 							<!-- Form list starts here -->
 							<ul class="o-form__list">
 								<li class="o-form__item">
-									<input type="text" class="o-form__control" placeholder="your name">
+									<input type="text" class="o-form__control" />
 								</li>
 
 								<li class="o-form__item">
-									<input type="email	" class="o-form__control" placeholder="your email">
+									<input type="text" class="o-form__control" />
 								</li>
 								
 								<li class="o-form__item">
-									<textarea name="message" class="o-form__control o-form__textarea" placeholder="hi, what's up?"></textarea>
+									<label>What's up?</label>
+									<textarea name="message" cols="20" rows="5" class="o-form__control o-form__textarea"></textarea>
 								</li>
 								
 								<li class="o-form__item">
-									<input type="submit" class="o-form__button" value="send">
+									<input type="submit" class="o-form__button" value="send" />
 								</li>
 							</ul>
 							<!-- Form list ends here -->
