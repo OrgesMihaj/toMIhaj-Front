@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 
 // image
-import  calendar from '../../assets/images/calendar.svg';
-import  bulgaria from '../../assets/images/bulgaria.svg';
-import   albania from '../../assets/images/albania.svg';
+import calendar from '../../assets/images/calendar.svg';
 
 const Award = () => {
-    const [awards, setAwards] = useState([
+    const [awards] = useState([
         {
             'id': 1,
             'competition': 'ICT Awards competition: FINALIST',

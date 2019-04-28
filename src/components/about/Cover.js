@@ -6,7 +6,7 @@ const Cover = (props) => {
         <div className="o-row">
     		<div className="c-cover">
     			<img src={props.image}
-    				 alt="cover image"
+    				 alt="cover"
     				 className="c-cover__image" />
     		</div>
         </div>

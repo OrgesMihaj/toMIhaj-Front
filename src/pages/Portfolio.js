@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 
 const Portfolio = () => {
-    const [projects, setProjects] = useState([
+    const [projects] = useState([
         {
             'id': 1,
             'name': '3handymen',
@@ -31,10 +31,10 @@ const Portfolio = () => {
     			<div className="o-row" key={project.id}>
 
                     {/* Project section starts here */}
-                    <div className={(project.id % 2 == 0) ? 'c-project o-text-align--right' : 'c-project'}>
+                    <div className={(project.id % 2 === 0) ? 'c-project o-text-align--right' : 'c-project'}>
 
                         <div className="c-project__cover"
-                             style={(project.id % 2 == 0) ? {'order': 2} : {}}>
+                             style={(project.id % 2 === 0) ? {'order': 2} : {}}>
 
     						<img className="c-project__image" src={"projects/" + project.image} alt={project.name} />
 

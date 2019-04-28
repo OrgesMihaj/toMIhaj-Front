@@ -6,7 +6,7 @@ import  bulgaria from '../../assets/images/bulgaria.svg';
 import   albania from '../../assets/images/albania.svg';
 
 const WorkExperience = () => {
-    const [experiences, setExperiences] = useState([
+    const [experiences] = useState([
         {
             'id': 1,
             'position': 'Front-end Developer',

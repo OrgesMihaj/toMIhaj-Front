@@ -6,7 +6,7 @@ import  bulgaria from '../../assets/images/bulgaria.svg';
 import   albania from '../../assets/images/albania.svg';
 
 const Education = () => {
-    const [educations, setEducations] = useState([
+    const [educations] = useState([
         {
             'id': 1,
             'study': 'Computer Science',
