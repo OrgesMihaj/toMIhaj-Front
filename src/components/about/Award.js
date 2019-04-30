@@ -14,32 +14,32 @@ const Award = () => {
     ]);
 
     return (
-        <div class="o-row">
+        <div className="o-row">
 
-            <div class="o-column">
-                <h2 class="o-column__title">
+            <div className="o-column">
+                <h2 className="o-column__title">
                     Award
                 </h2>
             </div>
 
-            <div class="o-column">
+            <div className="o-column">
 
                 {awards.map(award => (
 
-                    <div class="o-column__row">
-						<h2 class="o-column__subtitle">
+                    <div className="o-column__row" key={award.id}>
+						<h2 className="o-column__subtitle">
 							{award.competition}
 						</h2>
 
-						<small class="o-column__description o-column__description--small">
-							<img class="o-icon" src={calendar} alt="Calendar" />
+						<small className="o-column__description o-column__description--small">
+							<img className="o-icon" src={calendar} alt="Calendar" />
 
 							{award.date}
 						</small>
 
 						<br /><br />
 
-						<p class="o-column__description o-column__description--medium">
+						<p className="o-column__description o-column__description--medium">
 							{award.description}
 						</p>
 					</div>

@@ -20,15 +20,15 @@ const About = () => {
 
             <GeneralInformation />
 
-            <div class="o-row o-row--divider"></div>
+            <div className="o-row o-row--divider"></div>
 
             <WorkExperience />
 
-            <div class="o-row o-row--divider"></div>
+            <div className="o-row o-row--divider"></div>
 
             <Education />
 
-            <div class="o-row o-row--divider"></div>
+            <div className="o-row o-row--divider"></div>
 
             <Award />
 

@@ -1,71 +1,81 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
 // image
 import  calendar from '../../assets/images/calendar.svg';
 import  bulgaria from '../../assets/images/bulgaria.svg';
 import   albania from '../../assets/images/albania.svg';
 
-const Education = () => {
-    const [educations] = useState([
-        {
-            'id': 1,
-            'study': 'Computer Science',
-            'institution': 'American University in Bulgaria',
-            'institutionWeb': 'https://www.aubg.edu/',
-            'period': '2017 – Present',
-            'location': 'Blagoevgrad, Bulgaria',
-            'flag': bulgaria
-        },
-        {
-            'id': 2,
-            'study': 'Electronics',
-            'institution': 'Harry T. Fultz Institute',
-            'institutionWeb': 'https://www.aubg.edu/',
-            'period': '2013 – 2017',
-            'location': 'Tirana, Albania',
-            'flag': albania
+
+class Education extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            educations: []
         }
-    ]);
+    }
 
-    return (
-        <div class="o-row">
+    componentDidMount () {
+        fetch('https://ancient-waters-95274.herokuapp.com/api/v1/schools')
+            .then((response) => {
+                if (response.status !== 200) {
+                    console.log("Something went wrong! Status Code:" + response.status);
+                    return;
+                }
 
-            <div class="o-column">
-                <h2 class="o-column__title">
-                    Education
-                </h2>
+                return response.json();
+            }).then(data => {
+                this.setState({
+                    educations: data.schools
+                });
+            }).catch(error => {
+                console.log(error);
+            });
+    }
+
+
+    render () {
+        return (
+            <div className="o-row">
+
+                <div className="o-column">
+                    <h2 className="o-column__title">
+                        Education
+                    </h2>
+                </div>
+
+                <div className="o-column">
+                    {this.state.educations.map(education => (
+
+                        <div className="o-column__row" key={education.id}>
+
+                            <h2 className="o-column__subtitle">
+                                {education.study}
+
+                                <a href="https://www.aubg.edu/" className="o-badge">
+                                    {education.institution}
+                                </a>
+                            </h2>
+
+                            <small className="o-column__description o-column__description--small">
+                                <img className="o-icon" src={calendar} alt="Calendar" />
+                                {education.period}
+
+                                <img style={{marginLeft: 25 + 'px'}}
+                                     className="o-icon"
+                                     src={(education.flag === 'albania.svg') ? albania : bulgaria}
+                                     alt={education.location} />
+                                {education.location}
+                            </small>
+
+                        </div>
+                    ))}
+
+                </div>
             </div>
-
-            <div class="o-column">
-
-                {educations.map(education => (
-
-                    <div class="o-column__row" key={education.id}>
-
-                        <h2 class="o-column__subtitle">
-                            {education.study}
-
-                            <a href="https://www.aubg.edu/" class="o-badge">
-                                {education.institution}
-                            </a>
-                        </h2>
-
-                        <small class="o-column__description o-column__description--small">
-                            <img class="o-icon" src={calendar} alt="Calendar" />
-                            {education.period}
-
-                            <img style={{marginLeft: 25 + 'px'}}
-								 class="o-icon"
-								 src={education.flag} alt={education.location} />
-                            {education.location}
-                        </small>
-
-                    </div>
-                ))}
-
-            </div>
-        </div>
-    )
-}
+        )
+    }
+};
 
 export default Education;
